@@ -85,6 +85,12 @@ p {
   color: var(--color-p);
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background: #e5e5e5;
+}
+
 
 /* Container */
 .container {
@@ -425,34 +431,33 @@ p {
   background: linear-gradient(var(--color_1), 70%, var(--color_2));
 }
 
-.item__text {
+/* блок текста с иконкой на фото  */
+.item__content {
   position: absolute;
   width: 100%;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.item__text {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   color: white;
-  opacity: 0;
-  transition: opacity 0.2s linear;
 }
 
-.item__text::before {
-  position: absolute;
+/* иконка над текстом */
+.item__icon {
   width: 40px;
   height: 40px;
-  content: url(../images/about/team.svg);
-  color: white;
-  opacity: 0;
-  transition: opacity 0.2s linear;
-
+  fill: white;
 }
 
-.foto__item:hover .item__text,
-.foto__item:hover .item__text::before {
+.foto__item:hover .item__content {
   opacity: 1;
 }
 
@@ -462,7 +467,7 @@ p {
 
 
 /* Статистика */
-.statistic {
+.statistic__section {
   background-color: var(--color_4);
 
 }
@@ -504,8 +509,44 @@ p {
 
 
 
-/* section about us */
-/* /section about us */
+/* services */
+.services__block {
+  display: flex;
+  gap: 30px 50px;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.services__item {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 250px;
+}
+
+.services__icon {
+  display: block;
+}
+
+.services__svgIcon {
+  width: 40px;
+  height: 40px;
+  fill: var(--color_4);
+}
+
+.services__content {
+  margin-left: 25px;
+  text-align: left;
+}
+
+.content__header {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.content__text {}
+
+/* /.services */
 
 
 /*  /Main */
