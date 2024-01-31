@@ -36,6 +36,10 @@ ul li {
   list-style: none;
 }
 
+img {
+  display: block;
+}
+
 /* /Сброс стилей */
 
 
@@ -375,7 +379,6 @@ hr {
   font-family: var(--title-font-family), serif;
   font-size: var(--title-font-size);
   text-transform: uppercase;
-
 }
 
 /* линия под заголовком */
@@ -391,6 +394,7 @@ hr {
 
 /* подзаголовок */
 .section__subtitle {
+  position: relative;
   font-family: var(--subtitle-font-family), serif;
   font-size: var(--subtitle-font-size);
 }
@@ -515,6 +519,7 @@ hr {
   gap: 30px 50px;
   flex-wrap: wrap;
   padding: 50px 0;
+  margin: 0 30px;
 }
 
 .services__item {
@@ -547,6 +552,49 @@ hr {
 .content__text {}
 
 /* /.services */
+
+
+
+
+/* uniqueDesign */
+.uniqueDesign {
+  position: relative;
+  padding-bottom: 0;
+}
+
+.uniqueDesign::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: url("../images/devices/bg__design.jpg") center no-repeat;
+  background-size: cover;
+  background-color: white;
+  opacity: 0.4;
+}
+
+.uniqueDesign__devices {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.uniqueDesign__ipad {
+  /* display: flex;
+  margin: 0 auto; */
+  position: relative;
+}
+
+.uniqueDesign__iphone {
+  position: absolute;
+  left: 70%;
+  bottom: -13%;
+}
+
+/* ./uniqueDesign */
+
 
 
 /*  /Main */
